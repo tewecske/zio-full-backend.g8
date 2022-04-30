@@ -51,6 +51,6 @@ object Server extends CatsApp {
                  .orDie
     } yield server
 
-    res.foldM(err => putStrLn(s"Execution failed with: $err") *> ZIO.succeed(1), _ => ZIO.succeed(0))
+    res.foldM(err => putStrLn(s"Execution failed with: \$err") *> ZIO.succeed(1), _ => ZIO.succeed(0))
   }
 }
